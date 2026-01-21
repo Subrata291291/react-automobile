@@ -1,0 +1,1091 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --ss-poppins: "Poppins", sans-serif;
+  --ss-nunito: "Nunito", sans-serif;
+  --ss-font500: 500;
+  --ss-font600: 600;
+  --ss-font700: 700;
+  --ss-font800: 800;
+  --ss-fontbold: bold;
+  --ss-primary: #FFA100;
+  --ss-secondary: #000;
+}
+
+body {
+  font-family: var(--ss-poppins);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #000;
+}
+p {
+    font-family: var(--ss-nunito);
+}
+ul, li, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title-box {
+    margin-bottom: 2rem;
+}
+.title-box h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--ss-primary);
+    margin-bottom: 1rem;
+    position: relative;
+    margin-left: 4rem;
+}
+.title-box h4 span {
+    position: absolute;
+    content: "";
+    left: -3rem;
+    width: 2rem;
+    height: 0.5rem;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: var(--ss-primary);
+}
+.title-box h3 {
+    font-size: 4rem;
+    line-height: 5.5rem;
+    font-weight: 600;
+    color: var(--ss-secondary);
+}
+.title-box h3 span {
+    color: var(--ss-primary);
+}
+.common-btn {
+    background-color: var(--ss-primary);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    transition: all 0.3s;
+}
+.common-btn:hover {
+    background-color: var(--ss-secondary);
+    transition: all 0.3s;
+    color: #fff;
+}
+.p-100 {
+    padding: 10rem 0rem;
+}
+/*Header CSS*/
+.topbar-area {
+    background-color: var(--ss-secondary);
+    padding: 1.3rem 0rem;
+}
+.topbar-area ul {
+    gap: 2rem;
+}
+.topbar-area ul li a {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+}
+.topbar-area .topbar-right ul li a:hover {
+    color: var(--ss-primary);
+}
+.topbar-area .topbar-right ul li:first-child a:hover {
+    color: #fff;
+}
+.topbar-area ul li a span {
+    color: var(--ss-primary);
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.header-area .header-right {
+    display: flex;
+    justify-content: end;
+    gap: 4rem;
+}
+.header-area .header-right ul {
+    gap: 2.4rem;
+}
+.header-area .header-right ul li a {
+    color: var(--ss-secondary);
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.header-area .header-right .cart-count {
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    background-color: var(--ss-primary);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+}
+.header-area .header-right ul li a:hover {
+    color: var(--ss-primary);
+}
+.header-area .header-right ul .cart-area a:hover span {
+    background-color: var(--ss-primary);
+    color: #000;
+}
+.header-area .header-right .common-btn {
+    width: 20rem;
+    height: 6rem;
+}
+.header-area {
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+    z-index: 9;
+}
+.header-area .container .row {
+    background-color: #fff;
+    padding: 2rem;
+}
+/*Header CSS*/
+
+/*Banner Area*/
+.banner-area {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+.banner-area .bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+.banner-area .video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+.banner-area .banner-content {
+  position: relative;
+  z-index: 3;
+  padding: 30rem 0rem 18rem;
+}
+.banner-area .banner-content h3 {
+    font-size: 1.8rem;
+    color: var(--ss-primary);
+    font-weight: 400;
+    position: relative;
+    margin-left: 4rem;
+}
+.banner-area .banner-content span {
+    position: absolute;
+    content: "";
+    left: -3rem;
+    width: 2rem;
+    height: 0.5rem;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: var(--ss-primary);
+}
+.banner-area .banner-content h1 {
+    font-size: 7rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 8rem;
+    max-width: 72rem;
+    margin: 2rem 0rem 2.5rem;
+}
+.banner-area .banner-content p {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    max-width: 72rem;
+}
+.banner-area .banner-content .common-btn {
+    width: 20rem;
+    height: 6rem;
+    margin-top: 3rem;
+    border: 1px solid var(--ss-primary);
+}
+.banner-area .banner-content .common-btn:hover {
+    background-color: #00000096;
+}
+/*About CSS*/
+.about-area .about-left {
+    position: relative;
+}
+.about-area .about-left img {
+    height: 100%;
+    object-fit: cover;
+}
+.about-slider,
+.about-swiper,
+.about-swiper .swiper-wrapper,
+.about-swiper .swiper-slide {
+  height: 100%;
+}
+.about-area .about-right p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+.about-area .about-right ul li h2 {
+    color: var(--ss-primary);
+    font-size: 5rem;
+    font-weight: 600;
+    position: relative;
+}
+.about-area .about-right ul li h2 span {
+    position: absolute;
+    font-size: 4rem;
+}
+.about-area .about-right ul li h3 {
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.about-area .about-right ul {
+    margin: 3rem 0rem;
+    gap: 1rem;
+}
+.about-area .about-right ul li {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+.about-area .about-right {
+    padding-left: 5rem;
+}
+.about-area .about-right .common-btn {
+    width: 22.5rem;
+    height: 6rem;
+    margin-top: 3rem;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: var(--ss-primary) !important;
+}
+.swiper-pagination-bullet {
+    background-color: var(--ss-primary) !important;
+}
+/*Offer Area*/
+.offer-area {
+    background-color: #F8F8F8;
+}
+.offer-area .title-box {
+    max-width: 60rem;
+}
+.offer-area .common-btn {
+    width: 20rem;
+    height: 6rem;
+    background-color: transparent;
+    border: 1px solid var(--ss-primary);
+}
+.offer-area .common-btn:hover {
+    background-color: #000 !important;
+}
+.offer-area .title-box {
+    margin-bottom: 5rem;
+}
+.offer-area .service-tabs .nav-link {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.5rem 2rem;
+}
+.offer-area .service-tabs .nav-link.active {
+  background: var(--ss-primary);
+  color: #000;
+  border-radius: 0rem;
+  border-color: var(--ss-primary);
+}
+.offer-area .tab-content {
+    margin-top: 3rem;
+}
+.offer-area .tab-content h4 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.offer-area .tab-content p {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.offer-area .table-responsive {
+    margin-top: 2rem;
+}
+.offer-area .table>:not(caption)>*>* {
+    padding: 1rem;
+}
+.offer-area .col-md-4 {
+    text-align: right;
+}
+/*Offer Area*/
+/*Process Area*/
+.process-area ul {
+    margin: 4rem 0rem 4rem;
+    gap: 2rem;
+}
+.process-area .process-right {
+    background-color: #F8F8F8;
+    padding: 5rem;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.25);
+    position: absolute;
+    /* max-width: 74rem; */
+    margin-left: -20rem;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.process-area ul li {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    width: 100%;
+}
+.process-area ul li h3 {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 5.5rem;
+    color: var(--ss-primary);
+}
+.process-area ul li h5 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+.process-area .common-btn {
+    width: 20rem;
+    height: 6rem;
+}
+/*Process Area*/
+/*products Area*/
+.products-area {
+    background-color: #F8F8F8;
+}
+.products-area .col-md-4 {
+    text-align: right;
+}
+.products-area .common-btn {
+    width: 20rem;
+    height: 6rem;
+    background-color: transparent;
+    border: 1px solid var(--ss-primary);
+}
+.products-area .common-btn:hover {
+    background-color: var(--ss-primary);
+}
+.products-area .title-box {
+    max-width: 60rem;
+}
+.products-area .product-box ul li h3 {
+    font-size: 2rem;
+}
+.products-area .product-box ul li h5 {
+    font-size: 1.6rem;
+    color: var(--ss-primary);
+    margin: 1rem 0rem;
+}
+.products-area .product-box ul li h5 span {
+    font-size: 1.2rem;
+    color: #808080;
+    font-weight: 400;
+}
+.products-area .product-box {
+    margin-top: 4rem;
+}
+.products-area .product-box ul li p {
+    font-size: 1.4rem;
+}
+.products-area .product-box .product-pic {
+    margin-bottom: 2rem;
+    position: relative;
+}
+.products-area .product-box ul li {
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
+}
+.products-area .product-box .common-btn {
+    width: 14rem;
+    height: 4rem;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--ss-primary);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.products-area .product-box ul li .common-btn:hover {
+    background-color: #000;
+    border-color: #000;
+}
+.products-area .product-box ul li:hover .common-btn {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+}
+.products-area .product-box ul {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    justify-content: space-between;
+}
+.products-area .product-box ul li {
+    max-width: 30rem;
+    width: 100%;
+}
+/*products Area*/
+/*Form Area*/
+.form-area .form-box {
+    background: url(../images/form-bg.png) no-repeat;
+    background-position: center;
+    padding: 7.4rem;
+    position: relative;
+}
+.form-area form {
+    position: relative;
+    margin-top: 4rem;
+}
+.form-area .title-box {
+    position: relative;
+}
+.form-area .form-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(262deg, rgba(229, 39, 39, 1) -120%, rgba(0, 0, 0, 0.8) 100%);
+}
+.form-area .form-box form {
+    max-width: 70rem;
+}
+.form-area .form-box form .common-btn {
+    width: 100%;
+    height: 6rem;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    margin-top: 1rem;
+}
+.form-area .form-box form .custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 2rem center;
+}
+.form-area .form-box .row {
+    row-gap: 2rem;
+}
+.form-area .form-box .title-box h3 {
+    color: #fff;
+}
+.form-area .form-box form input, select {
+    width: 100%;
+    border: none;
+    border-radius: 5rem;
+    height: 5.5rem;
+    padding: 0rem 2rem;
+    outline: none;
+    font-size: 1.6rem;
+    color: #000;
+}
+.form-area {
+    margin-bottom: 10rem;
+}
+.modal-content .form-area {
+    margin-bottom: 0rem;
+}
+
+/*Form Area*/
+/*Footer Area*/
+.footer-area {
+    padding: 8rem 0rem 3rem;
+    background-color: #000;
+}
+.footer-area .footer-left p {
+    color: #808080;
+    font-size: 1.6rem;
+    margin: 3rem 0rem;
+    max-width: 33rem;
+}
+.footer-area .footer-left ul {
+    gap: 1rem;
+}
+.footer-area .footer-left ul li a {
+    color: #fff;
+    background-color: #808080;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-area .footer-left ul li a:hover {
+    background-color: var(--ss-primary);
+}
+.footer-area .footer-menu h3 {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+.footer-area .footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+.footer-area .footer-menu ul li a {
+    color: #808080;
+    font-size: 1.6rem;
+}
+.footer-area .footer-menu ul li a:hover {
+    color: var(--ss-primary);
+}
+.footer-area .footer-menu ul li a span {
+    color: var(--ss-primary);
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+.footer-area .copyright-area {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid #80808057;
+}
+.footer-area .copyright-area p {
+    color: #808080;
+    font-size: 1.4rem;
+}
+.footer-area .copyright-area p span {
+    color: var(--ss-primary);
+}
+.footer-area .copyright-area ul {
+    gap: 1rem;
+    justify-content: end;
+}
+.footer-area .copyright-area ul li a {
+    color: #808080;
+    font-size: 1.4rem;
+}
+.footer-area .copyright-area ul li a:hover {
+    color: var(--ss-primary);
+}
+
+.form-modal .form-area .form-box form {
+    max-width: 100%;
+}
+.form-modal .btn-close {
+    right: 10px;
+    top: 10px;
+    background-color: var(--ss-primary);
+    opacity: 1;
+    padding: 1rem;
+    border-radius: 0rem;
+    z-index: 9;
+}
+.form-modal .modal-dialog {
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+/*Common banner CSS*/
+.common-banner {
+    background: url(../images/common-bg.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 25rem 0rem 10rem;
+}
+.common-banner h3 {
+    color: var(--ss-primary);
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/*Single Product CSS*/
+.single-product-area .product-details-right h2 {
+    font-size: 2rem;
+}
+.single-product-area .product-details-right h4 {
+    font-size: 1.7rem;
+    color: var(--ss-primary);
+    margin-top: 1rem;
+}
+.single-product-area .product-details-right h4 span {
+    color: #808080;
+    font-size: 1.2rem;
+}
+.single-product-area .product-details-right .product-desc {
+    font-size: 1.6rem;
+    margin: 2rem 0rem;
+}
+.single-product-area .product-details-right .common-btn {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+}
+.single-product-area .product-details-left {
+    margin-right: 4rem;
+}
+.single-product-area .product-details-right .specification-box {
+    border: 1px solid #ddd;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+.single-product-area .product-details-right .specification-box h4 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-top: 0rem;
+}
+.single-product-area .product-details-right .specification-box ul li p {
+    font-size: 1.5rem;
+    color: #808080;
+}
+.single-product-area .product-details-right .specification-box {
+    margin-top: 4rem;
+}
+ .single-product-area .product-details-right .specification-box ul li:last-child p {
+    color: #000;
+    font-weight: 700;
+ }
+.single-product-area .product-details-right .specification-box ul {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+.single-product-area .product-details-right .specification-box ul:last-child {
+    margin: 0rem;
+}
+/*Cart page CSS*/
+.cart-area .table-responsive tbody td {
+    padding: 1.5rem 0rem;
+    font-size: 1.4rem;
+}
+.cart-area .table-responsive thead tr th {
+   padding: 1.5rem 0rem; 
+   font-size: 1.6rem;
+}
+.cart-area .table-responsive tbody button {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+.cart-area .table-responsive tbody .delete-btn {
+    width: inherit;
+    height: inherit;
+    font-size: 1.1rem;
+}
+.proceed-btn .common-btn {
+    padding: 1.5rem 2rem;
+}
+/*Cart page CSS*/
+
+/*Chckout page CSS*/
+.checkout-area .checkout-box h4 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.checkout-area .checkout-box form label {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.checkout-area .checkout-box form input {
+    font-size: 1.6rem;
+    border-radius: 0rem;
+    padding: 1rem;
+    outline: none;
+}
+.checkout-area .checkout-box form textarea {
+    font-size: 1.6rem;
+    border-radius: 0rem;
+    padding: 1rem;
+    outline: none;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 .0rem rgba(13, 110, 253, .25);
+    border-color: #ddd;
+}
+.checkout-area .checkout-box .common-btn {
+    padding: 1rem 2rem;
+}
+.checkout-area .checkout-box ul li p {
+    font-size: 1.6rem;
+}
+.checkout-area .checkout-box ul li {
+    padding: 1rem;
+}
+.checkout-area .checkout-box h5 {
+    font-size: 1.6rem;
+}
+.checkout-area .checkout-box form {
+    padding-right: 4rem;
+}
+.checkout-area .checkout-right {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+}
+
+/*Resposive CSS*/
+@media (min-width: 1700px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1580px;
+  }
+}
+@media (max-width: 1700px) {
+    .about-area .about-right ul li h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    .about-area .about-right ul li h2 {
+        margin-bottom: 1rem;
+        font-size: 4rem;
+    }
+    .process-area ul {
+        margin: 3rem 0rem 4.5rem;
+    }
+    .process-area ul li h5 {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 1399px) {
+    .title-box h3 {
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+    .about-area .about-right ul li h3 {
+        font-size: 1.6rem;
+    }
+    .about-area .about-right ul li {
+        padding: 1.5rem;
+    }
+    .about-area .about-right ul li h2 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    .process-area ul li h3 {
+        font-size: 4rem;
+        line-height: 2.5rem;
+    }
+    .process-area ul {
+        margin: 0rem 0rem 2.5rem;
+    }
+    .process-area ul li h5 {
+        font-size: 1.5rem;
+    }
+    .products-area .product-box ul li {
+        max-width: 27rem;
+    }
+    .form-modal .modal-dialog {
+        max-width: 80%;
+    }
+}
+@media (min-width: 1400px) {
+
+}
+@media (max-width: 1199px) {
+    .topbar-area ul {
+        gap: 1rem;
+    }
+    .topbar-area ul li a {
+        font-size: 1.3rem;
+        line-height: inherit
+    }
+    .header-area .header-right {
+        gap: 2rem;
+    }
+    .banner-area .banner-content h1 {
+        font-size: 5rem;
+        line-height: 6rem;
+    }
+    .banner-area .banner-content {
+        padding: 22rem 0rem 10rem;
+    }
+    .header-area .header-right .common-btn {
+        width: 18rem;
+        height: 5rem;
+    }
+    .header-area .container .row {
+        padding: 1rem 0.5rem;
+    }
+    .banner-area .banner-content .common-btn {
+        width: 18rem;
+        height: 5rem;
+    }
+    .about-area .about-right {
+        padding-left: 2rem;
+    }
+    .about-area .about-right .common-btn {
+        width: 15em;
+        height: 5rem;
+    }
+    .offer-area .common-btn {
+        width: 20rem;
+        height: 5rem;
+    }
+    .offer-area .service-tabs .nav-link {
+        padding: 1rem 2rem;
+    }
+    .process-area .process-right {
+        position: inherit;
+        transform: none;
+        left: inherit;
+        right: inherit;
+        top: inherit;
+        margin-left: inherit;
+        background-color: #fff;
+    }
+    .process-area ul li h5 {
+        font-size: 1.6rem;
+    }
+    .process-area .common-btn {
+        width: 18rem;
+        height: 5rem;
+    }
+    .products-area .product-box ul li {
+        max-width: 30rem;
+    }
+    .footer-area .footer-menu h3 {
+        font-size: 2rem;
+    }
+    .form-area {
+        margin-bottom: 6rem;
+    }
+}
+@media screen and (max-width: 991px) {
+    .p-100 {
+        padding: 5rem 0rem;
+    }
+    .topbar-area ul li a {
+        font-size: 1.1rem;
+    }
+    .topbar-area ul {
+        justify-content: center;
+    }
+    .topbar-area ul li a span {
+        margin-right: 0.2rem;
+    }
+    .header-area .header-right ul {
+        gap: 1.5rem;
+    }
+    .header-area .menu-icon {
+        border: none;
+        background-color: transparent;
+        font-size: 2.5rem;
+    }
+    .header-area .header-right {
+        gap: 1rem;
+    }
+    .about-area .about-right {
+        margin-top: 4rem;
+        padding-left: 0rem;
+    }
+    .offer-area .service-tabs .nav-link {
+        padding: 1rem 1.5rem;
+    }
+    .products-area .product-box ul li {
+        max-width: 48%;
+    }
+    .form-area .form-box {
+        padding: 4rem;
+    }
+    .footer-area .footer-left p {
+        max-width: 100%;
+    }
+    .footer-area .footer-left {
+        margin-bottom: 4rem;
+    }
+    .footer-area .col-lg-6 {
+        text-align: center;
+    }
+    .footer-area .copyright-area {
+        padding-top: 3rem;
+    }
+    .checkout-area .checkout-box form {
+        padding-right: 0rem;
+    }
+    .checkout-area .checkout-right {
+        margin-bottom: 4rem;
+    }
+}
+@media screen and (min-width: 992px) {
+
+}
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (max-width: 767px) {
+    .header-area {
+        top: 6rem;
+    }
+    .topbar-area ul {
+        gap: 1.5rem;
+    }
+    .banner-area .banner-content {
+        padding: 13rem 1.5rem 7rem;
+    }
+    .banner-area .banner-content h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .banner-area .banner-content p {
+        font-size: 1.6rem;
+    }
+    .topbar-area ul li a {
+        font-size: 1.3rem;
+    }
+    .topbar-area ul {
+        justify-content: center;
+    }
+    .header-area .container .row {
+        margin: 0rem 0rem;
+    }
+    .header-area .header-right .common-btn {
+        width: 15rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+    .banner-area .banner-content .common-btn {
+        width: 15rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+    .title-box h3 {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+    .about-area .about-right ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .about-area .about-right ul li {
+        width: 100%;
+    }
+    .offer-area .title-box {
+        margin-bottom: 2rem;
+    }
+    .offer-area .col-md-4 {
+        text-align: left;
+    }
+    .offer-area .service-tabs {
+        margin-top: 1rem;
+    }
+    .process-area .process-right {
+        padding: 3rem;
+    }
+    .process-area ul li h5 {
+        font-size: 1.6rem;
+    }
+    .process-area .common-btn {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    .about-area .about-right .common-btn {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    .process-area ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .products-area .product-box ul {
+        column-gap: 1rem;
+    }
+    .products-area .product-box ul li {
+        max-width: 48.7%;
+    }
+    .products-area .product-box ul li h3 {
+        font-size: 1.6rem;
+    }
+    .products-area .product-box ul li p {
+        font-size: 1.2rem;
+    }
+    .products-area .product-box ul li h5 {
+        font-size: 1.4rem;
+    }
+    .products-area .product-box ul li h5 span {
+        font-size: 1rem;
+    }
+    .products-area .product-box ul {
+        row-gap: 1rem;
+    }
+    .products-area .product-box {
+        margin-top: 0rem;
+    }
+    .form-area .form-box form input, select {
+        height: 4rem;
+    }
+    .form-area .title-box {
+        text-align: center;
+    }
+    .form-area .title-box h4 {
+        margin-left: 0rem;
+    }
+    .form-area .title-box h4 span {
+        display: none;
+    }
+    .form-area .form-box {
+        padding: 4rem 2rem;
+    }
+    .footer-area .footer-menu:last-child {
+        margin-top: 4rem;
+    }
+    .footer-area .footer-left {
+        margin-bottom: 0rem;
+    }
+    .form-area {
+        margin-bottom: 4rem;
+    }
+    .footer-area .footer-menu ul {
+        margin-top: 2rem;
+    }
+    .form-modal .modal-dialog {
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 575px) {
+    
+}
+@media screen and (max-width: 480px) {
+    .banner-area .banner-content h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .products-area .product-box ul li {
+        max-width: 48%;
+    }
+}
+@media screen and (max-width: 375px) {
+    
+}
