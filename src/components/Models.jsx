@@ -7,23 +7,15 @@ const Models = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch(
-          `${import.meta.env.VITE_WC_URL}/wp-json/wc/v3/products?per_page=20&consumer_key=${import.meta.env.VITE_WC_KEY}&consumer_secret=${import.meta.env.VITE_WC_SECRET}`
-        );
+  const fetchProducts = async () => {
+    const res = await fetch("/.netlify/functions/get-products");
+    const data = await res.json();
+    setProducts(data);
+    setLoading(false);
+  };
 
-        const data = await res.json();
-        setProducts(data);
-      } catch (error) {
-        console.error("WooCommerce API Error:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
+  fetchProducts();
+}, []);
 
   return (
     <section className="products-area p-100">
