@@ -1,45 +1,36 @@
-const fetch = require("node-fetch");
-
-exports.handler = async (event) => {
-  const { id } = event.queryStringParameters || {};
-
-  if (!id) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: "Product ID missing" }),
-    };
-  }
-
-  const url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products/${id}`;
-
+export async function handler(event) {
   try {
-    const res = await fetch(url, {
-      headers: {
-        Authorization:
-          "Basic " +
-          Buffer.from(
-            `${process.env.NETLIFY_WC_KEY}:${process.env.NETLIFY_WC_SECRET}`
-          ).toString("base64"),
-      },
-    });
+    const { id } = event.queryStringParameters;
 
-    if (!res.ok) {
+    if (!id) {
       return {
-        statusCode: res.status,
-        body: JSON.stringify({ error: "Product not found" }),
+        statusCode: 400,
+        body: JSON.stringify({ error: "Product ID missing" })
       };
     }
 
-    const product = await res.json();
+    const url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products/${id}`;
+
+    const auth = Buffer.from(
+      `${process.env.NETLIFY_WC_KEY}:${process.env.NETLIFY_WC_SECRET}`
+    ).toString("base64");
+
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Basic ${auth}`
+      }
+    });
+
+    const data = await res.json();
 
     return {
       statusCode: 200,
-      body: JSON.stringify(product),
+      body: JSON.stringify(data)
     };
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+      body: JSON.stringify({ error: error.message })
     };
   }
-};
+}

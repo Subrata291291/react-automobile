@@ -1,34 +1,21 @@
-export const handler = async () => {
+export async function handler() {
   try {
-    const url = process.env.NETLIFY_WC_URL;
-    const key = process.env.NETLIFY_WC_KEY;
-    const secret = process.env.NETLIFY_WC_SECRET;
+    const url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products`;
 
-    if (!url || !key || !secret) {
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: "Missing environment variables" })
-      };
-    }
+    const auth = Buffer.from(
+      `${process.env.NETLIFY_WC_KEY}:${process.env.NETLIFY_WC_SECRET}`
+    ).toString("base64");
 
-    const auth = Buffer.from(`${key}:${secret}`).toString("base64");
-
-    const response = await fetch(
-      `${url}/wp-json/wc/v3/products?per_page=20`,
-      {
-        headers: {
-          Authorization: `Basic ${auth}`
-        }
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Basic ${auth}`
       }
-    );
+    });
 
-    const data = await response.json();
+    const data = await res.json();
 
     return {
       statusCode: 200,
-      headers: {
-        "Content-Type": "application/json"
-      },
       body: JSON.stringify(data)
     };
   } catch (error) {
@@ -37,4 +24,4 @@ export const handler = async () => {
       body: JSON.stringify({ error: error.message })
     };
   }
-};
+}
