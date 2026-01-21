@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 export const handler = async () => {
   try {
     const url = process.env.NETLIFY_WC_URL;
