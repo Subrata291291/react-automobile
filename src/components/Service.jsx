@@ -111,7 +111,7 @@ const Service = () => {
                       <td>SERVICE MANAGER</td>
                       <td>RUDRA HYUNDAI</td>
                       <td>ASANSOL</td>
-                      <td>8348691808</td>
+                      <td>7001906952</td>
                     </tr>
                     <tr>
                       <td>2</td>
@@ -119,7 +119,7 @@ const Service = () => {
                       <td>SERVICE MANAGER</td>
                       <td>RUDRA HYUNDAI</td>
                       <td>ASANSOL</td>
-                      <td>8348691808</td>
+                      <td>7001906952</td>
                     </tr>
                     <tr>
                       <td>3</td>
@@ -127,7 +127,7 @@ const Service = () => {
                       <td>SERVICE MANAGER</td>
                       <td>RUDRA HYUNDAI</td>
                       <td>ASANSOL</td>
-                      <td>8348691808</td>
+                      <td>7001906952</td>
                     </tr>
                     <tr>
                       <td>4</td>
@@ -135,7 +135,7 @@ const Service = () => {
                       <td>SERVICE MANAGER</td>
                       <td>RUDRA HYUNDAI</td>
                       <td>ASANSOL</td>
-                      <td>8348691808</td>
+                      <td>7001906952</td>
                     </tr>
                     <tr>
                       <td>5</td>
@@ -143,7 +143,7 @@ const Service = () => {
                       <td>SERVICE MANAGER</td>
                       <td>RUDRA HYUNDAI</td>
                       <td>ASANSOL</td>
-                      <td>8348691808</td>
+                      <td>7001906952</td>
                     </tr>
                   </tbody>
                 </table>

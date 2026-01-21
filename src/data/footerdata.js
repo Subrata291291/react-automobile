@@ -34,7 +34,7 @@ export const footerData = {
 
   copyright: {
     year: 2026,
-    brand: "Salujaautomobiles"
+    brand: "Bajaj Automobiles"
   },
    copyrightLinks: [
     { label: "Privacy Policy", url: "#" },

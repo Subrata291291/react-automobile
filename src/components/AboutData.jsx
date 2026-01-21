@@ -41,7 +41,7 @@ const AboutData = () => {
             <div className="about-right h-100">
               <div className="title-box">
                 <h4><span></span> Who We Are</h4>
-                <h3>Saluja Auto Mobiles – A Legacy on Wheels</h3>
+                <h3>Bajaj Auto Mobiles - A Legacy on Wheels</h3>
               </div>
 
               <p>

@@ -50,7 +50,7 @@ const Header = () => {
                     <li className="d-none d-md-block">
                       <a href="#">
                         <span><i className="fa-solid fa-location-dot me-2"></i></span>
-                        GT.Road, Laxmipurm, Burdwan, WB - 713103
+                        Salt lake, Sector V, Kolkata, WB - 700159
                       </a>
                     </li>
                   </ul>
