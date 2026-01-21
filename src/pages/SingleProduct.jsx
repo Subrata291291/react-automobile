@@ -1,7 +1,5 @@
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import products from "../data/products.json";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { toast } from "react-toastify";
@@ -13,20 +11,35 @@ const SingleProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const product = products.find(item => item.id === Number(id));
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const convertPriceToNumber = (price) => {
-    if (!price) return 0;
-    const lower = price.toLowerCase();
-    if (lower.includes("lakh")) {
-      return Number(price.replace(/[^\d.]/g, "")) * 100000;
-    }
-    return Number(price.replace(/[^\d]/g, ""));
-  };
+  // Fetch single product from WooCommerce (via Netlify Function)
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const res = await fetch(
+          `/.netlify/functions/get-product?id=${id}`
+        );
+        const data = await res.json();
+        setProduct(data);
+      } catch (error) {
+        console.error("Product fetch error:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
+    fetchProduct();
+  }, [id]);
+
+  // Add to cart
   const handleBookNow = () => {
+    if (!product) return;
+
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const numericPrice = convertPriceToNumber(product.price);
+
+    const numericPrice = Number(product.price || 0);
 
     const existingItem = cart.find(item => item.id === product.id);
 
@@ -38,8 +51,8 @@ const SingleProduct = () => {
         id: product.id,
         name: product.name,
         price: numericPrice,
-        displayPrice: product.price,
-        image: product.images[0],
+        displayPrice: `₹${numericPrice.toLocaleString("en-IN")}`,
+        image: product.images?.[0]?.src,
         qty: 1
       });
       toast.success("Product added to cart 🛒");
@@ -47,11 +60,17 @@ const SingleProduct = () => {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    // notify header instantly
+    // Update header cart count instantly
     window.dispatchEvent(new Event("cartUpdated"));
   };
 
-  if (!product) {
+  // Loading state
+  if (loading) {
+    return <h2 className="text-center p-100">Loading product...</h2>;
+  }
+
+  // Not found
+  if (!product || product.id === undefined) {
     return <h2 className="text-center p-100">Product Not Found</h2>;
   }
 
@@ -66,6 +85,7 @@ const SingleProduct = () => {
       <section className="single-product-area p-100">
         <div className="container">
           <div className="row align-items-center">
+
             {/* Images */}
             <div className="col-lg-6">
               <div className="product-details-left">
@@ -78,9 +98,12 @@ const SingleProduct = () => {
                   autoplay={{ delay: 3000 }}
                   loop
                 >
-                  {product.images.map((img, index) => (
+                  {product.images?.map((img, index) => (
                     <SwiperSlide key={index}>
-                      <img src={img} alt={`${product.name} ${index + 1}`} />
+                      <img
+                        src={img.src}
+                        alt={`${product.name} ${index + 1}`}
+                      />
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -91,11 +114,19 @@ const SingleProduct = () => {
             <div className="col-lg-6">
               <div className="product-details-right">
                 <h2>{product.name}</h2>
+
                 <h4 className="price">
-                  {product.price} <span>{product.note}</span>
+                  ₹{Number(product.price).toLocaleString("en-IN")}
+                  <span> onwards</span>
                 </h4>
 
-                <p className="product-desc">{product.desc}</p>
+                {/* Woo description */}
+                <div
+                  className="product-desc"
+                  dangerouslySetInnerHTML={{
+                    __html: product.description
+                  }}
+                />
 
                 {/* Buttons */}
                 <button className="common-btn" onClick={handleBookNow}>
@@ -109,49 +140,9 @@ const SingleProduct = () => {
                   Back
                 </button>
 
-                {/* Specs */}
-                <div className="specification-box">
-                  <h4>Key Specifications</h4>
-
-                  <div className="row">
-                    <div className="col-md-6">
-                      <ul>
-                        <li><p><i className="fa-brands fa-searchengin"></i> Engine</p></li>
-                        <li><p>{product.specifications.engine}</p></li>
-                      </ul>
-
-                      <ul>
-                        <li><p><i className="fa-solid fa-bolt"></i> Power</p></li>
-                        <li><p>{product.specifications.power}</p></li>
-                      </ul>
-
-                      <ul>
-                        <li><p><i className="fa-solid fa-gear"></i> Transmission</p></li>
-                        <li><p>{product.specifications.transmission}</p></li>
-                      </ul>
-                    </div>
-
-                    <div className="col-md-6 mt-5 mt-md-0">
-                      <ul>
-                        <li><p><i className="fa-solid fa-charging-station"></i> Ground Clearance</p></li>
-                        <li><p>{product.specifications.groundClearance}</p></li>
-                      </ul>
-
-                      <ul>
-                        <li><p><i className="fa-solid fa-gears"></i> Torque</p></li>
-                        <li><p>{product.specifications.torque}</p></li>
-                      </ul>
-
-                      <ul>
-                        <li><p><i className="fa-solid fa-satellite-dish"></i> Drive Type</p></li>
-                        <li><p>{product.specifications.driveType}</p></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
+
           </div>
         </div>
       </section>
