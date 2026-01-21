@@ -19,7 +19,7 @@ const SingleProduct = () => {
     const fetchProduct = async () => {
       try {
         const res = await fetch(
-          `/.netlify/functions/get-product?id=${id}`
+          `/.netlify/functions/get-products?id=${id}`
         );
         const data = await res.json();
         setProduct(data);
