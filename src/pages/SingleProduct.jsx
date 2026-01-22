@@ -139,7 +139,43 @@ const SingleProduct = () => {
                 >
                   Back
                 </button>
+                  {/* Specifications */}
+                  {product.acf && (
+                    <div className="specification-box mt-4">
+                      <h4>Key Specifications</h4>
 
+                      <div className="row">
+                        <div className="col-md-6">
+                          <ul>
+                            <li>
+                              <strong>Engine:</strong> {product.acf.engine}
+                            </li>
+                            <li>
+                              <strong>Power:</strong> {product.acf.power}
+                            </li>
+                            <li>
+                              <strong>Transmission:</strong> {product.acf.transmission}
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div className="col-md-6">
+                          <ul>
+                            <li>
+                              <strong>Ground Clearance:</strong>{" "}
+                              {product.acf.ground_clearance}
+                            </li>
+                            <li>
+                              <strong>Torque:</strong> {product.acf.torque}
+                            </li>
+                            <li>
+                              <strong>Drive Type:</strong> {product.acf.drive_type}
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  )}
               </div>
             </div>
 
