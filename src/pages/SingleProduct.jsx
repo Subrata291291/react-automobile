@@ -140,6 +140,7 @@ const SingleProduct = () => {
                   Back
                 </button>
                   {/* Specifications */}
+                   <h4>Key Specifications</h4>
                   {product.acf && (
                     <div className="specification-box mt-4">
                       <h4>Key Specifications</h4>
