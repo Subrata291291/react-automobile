@@ -9,7 +9,7 @@ const Models = () => {
  useEffect(() => {
   const fetchProducts = async () => {
     const res = await fetch(
-      "/.netlify/functions/get-products?per_page=10&category=38"
+      "/.netlify/functions/get-products?per_page=10&category=50"
     );
     const data = await res.json();
     setProducts(data);
