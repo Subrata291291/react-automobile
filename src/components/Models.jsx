@@ -6,10 +6,10 @@ const Models = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+ useEffect(() => {
   const fetchProducts = async () => {
     const res = await fetch(
-      "/.netlify/functions/get-products?per_page=15"
+      "/.netlify/functions/get-products?per_page=10&category=38"
     );
     const data = await res.json();
     setProducts(data);

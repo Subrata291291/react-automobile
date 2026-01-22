@@ -2,9 +2,17 @@
 
 exports.handler = async (event) => {
   try {
-    const perPage = event.queryStringParameters?.per_page || 10;
+    const {
+      per_page = 10,
+      page = 1,
+      category
+    } = event.queryStringParameters || {};
 
-    const url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products?per_page=${perPage}`;
+    let url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products?per_page=${per_page}&page=${page}`;
+
+    if (category) {
+      url += `&category=${category}`;
+    }
 
     const auth = Buffer.from(
       `${process.env.NETLIFY_WC_KEY}:${process.env.NETLIFY_WC_SECRET}`
