@@ -17,15 +17,45 @@ export async function handler(event) {
 
     const res = await fetch(url, {
       headers: {
-        Authorization: `Basic ${auth}`
+        Authorization: `Basic ${auth}`,
+        "Content-Type": "application/json"
       }
     });
 
-    const data = await res.json();
+    if (!res.ok) {
+      return {
+        statusCode: res.status,
+        body: JSON.stringify({ error: "Failed to fetch product" })
+      };
+    }
+
+    const product = await res.json();
+
+    // Extract ACF fields from WooCommerce meta_data
+    const acf = {};
+    const allowedFields = [
+      "engine",
+      "power",
+      "transmission",
+      "ground_clearance",
+      "torque",
+      "drive_type"
+    ];
+
+    if (Array.isArray(product.meta_data)) {
+      product.meta_data.forEach((meta) => {
+        if (allowedFields.includes(meta.key)) {
+          acf[meta.key] = meta.value;
+        }
+      });
+    }
+
+    // Attach ACF to product response
+    product.acf = acf;
 
     return {
       statusCode: 200,
-      body: JSON.stringify(data)
+      body: JSON.stringify(product)
     };
   } catch (error) {
     return {
