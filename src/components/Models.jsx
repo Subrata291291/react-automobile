@@ -8,7 +8,9 @@ const Models = () => {
 
   useEffect(() => {
   const fetchProducts = async () => {
-    const res = await fetch("/.netlify/functions/get-products?per_page=10");
+    const res = await fetch(
+      "/.netlify/functions/get-products?per_page=10"
+    );
     const data = await res.json();
     setProducts(data);
     setLoading(false);
@@ -16,6 +18,7 @@ const Models = () => {
 
   fetchProducts();
 }, []);
+
 
   return (
     <section className="products-area p-100">
