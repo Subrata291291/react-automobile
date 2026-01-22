@@ -1,6 +1,6 @@
 export async function handler() {
   try {
-    const url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products`;
+    const url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products?per_page=100`;
 
     const auth = Buffer.from(
       `${process.env.NETLIFY_WC_KEY}:${process.env.NETLIFY_WC_SECRET}`
