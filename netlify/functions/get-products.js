@@ -1,6 +1,13 @@
-export async function handler() {
+// netlify/functions/get-products.js
+
+const fetch = require("node-fetch");
+
+exports.handler = async (event) => {
   try {
-    const url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products?per_page=100`;
+    // read per_page from query string (default = 10)
+    const perPage = event.queryStringParameters?.per_page || 10;
+
+    const url = `${process.env.NETLIFY_WC_URL}/wp-json/wc/v3/products?per_page=${perPage}`;
 
     const auth = Buffer.from(
       `${process.env.NETLIFY_WC_KEY}:${process.env.NETLIFY_WC_SECRET}`
@@ -8,20 +15,26 @@ export async function handler() {
 
     const res = await fetch(url, {
       headers: {
-        Authorization: `Basic ${auth}`
-      }
+        Authorization: `Basic ${auth}`,
+      },
     });
 
     const data = await res.json();
 
     return {
       statusCode: 200,
-      body: JSON.stringify(data)
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify(data),
     };
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message })
+      body: JSON.stringify({
+        error: "Failed to fetch products",
+        details: error.message,
+      }),
     };
   }
-}
+};
