@@ -107,42 +107,42 @@ const Service = () => {
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>AMIT KUMAR GUHA</td>
+                      <td>SUBRATA HALDAR</td>
                       <td>SERVICE MANAGER</td>
-                      <td>RUDRA HYUNDAI</td>
-                      <td>ASANSOL</td>
+                      <td>MAHINDRA</td>
+                      <td>KOLKATA</td>
                       <td>7001906952</td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>AMIT KUMAR GUHA</td>
+                      <td>SUBRATA HALDAR</td>
                       <td>SERVICE MANAGER</td>
-                      <td>RUDRA HYUNDAI</td>
-                      <td>ASANSOL</td>
+                      <td>MAHINDRA</td>
+                      <td>KOLKATA</td>
                       <td>7001906952</td>
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>AMIT KUMAR GUHA</td>
+                      <td>SUBRATA HALDAR</td>
                       <td>SERVICE MANAGER</td>
-                      <td>RUDRA HYUNDAI</td>
-                      <td>ASANSOL</td>
+                      <td>MAHINDRA</td>
+                      <td>KOLKATA</td>
                       <td>7001906952</td>
                     </tr>
                     <tr>
                       <td>4</td>
-                      <td>AMIT KUMAR GUHA</td>
+                      <td>SUBRATA HALDAR</td>
                       <td>SERVICE MANAGER</td>
-                      <td>RUDRA HYUNDAI</td>
-                      <td>ASANSOL</td>
+                      <td>MAHINDRA</td>
+                      <td>KOLKATA</td>
                       <td>7001906952</td>
                     </tr>
                     <tr>
                       <td>5</td>
-                      <td>AMIT KUMAR GUHA</td>
+                      <td>SUBRATA HALDAR</td>
                       <td>SERVICE MANAGER</td>
-                      <td>RUDRA HYUNDAI</td>
-                      <td>ASANSOL</td>
+                      <td>MAHINDRA</td>
+                      <td>KOLKATA</td>
                       <td>7001906952</td>
                     </tr>
                   </tbody>
