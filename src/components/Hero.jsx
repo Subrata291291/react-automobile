@@ -9,7 +9,6 @@ const Hero = () => {
     fetch("https://salujaautomobile.com/wp-json/custom/v1/banner")
       .then((res) => res.json())
       .then((data) => {
-        console.log("Banner API:", data); // debug
         setBanner(data);
       })
       .catch((err) => console.log(err));
