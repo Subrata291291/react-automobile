@@ -1,0 +1,208 @@
+[
+  {
+    "id": 1,
+    "name": "Bajaj Chetak Electric",
+    "price": "Rs. 1,15,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "The Bajaj Chetak Electric is a premium electric scooter with a solid metal body, smooth ride quality, and modern connectivity features.",
+    "specifications": {
+      "engine": "Electric Motor",
+      "power": "4.2 kW",
+      "transmission": "Automatic",
+      "groundClearance": "165 mm",
+      "torque": "20 Nm",
+      "driveType": "RWD"
+    }
+  },
+
+  {
+    "id": 2,
+    "name": "Bajaj Pulsar 125",
+    "price": "Rs. 85,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "The Bajaj Pulsar 125 offers sporty styling with excellent mileage, ideal for daily commuting.",
+    "specifications": {
+      "engine": "124.4 cc",
+      "power": "11.8 bhp",
+      "transmission": "Manual",
+      "groundClearance": "165 mm",
+      "torque": "10.8 Nm",
+      "driveType": "Chain"
+    }
+  },
+
+  {
+    "id": 3,
+    "name": "Bajaj Pulsar 150",
+    "price": "Rs. 1,10,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "A legendary motorcycle trusted by millions for performance and durability.",
+    "specifications": {
+      "engine": "149.5 cc",
+      "power": "14 bhp",
+      "transmission": "Manual",
+      "groundClearance": "165 mm",
+      "torque": "13.2 Nm",
+      "driveType": "Chain"
+    }
+  },
+
+  {
+    "id": 4,
+    "name": "Bajaj Pulsar N160",
+    "price": "Rs. 1,32,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "The Pulsar N160 features aggressive design, dual-channel ABS, and refined performance.",
+    "specifications": {
+      "engine": "164.8 cc",
+      "power": "16 bhp",
+      "transmission": "Manual",
+      "groundClearance": "176 mm",
+      "torque": "14.7 Nm",
+      "driveType": "Chain"
+    }
+  },
+
+  {
+    "id": 5,
+    "name": "Bajaj Pulsar NS200",
+    "price": "Rs. 1,50,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "A performance-oriented naked motorcycle with sharp handling and strong acceleration.",
+    "specifications": {
+      "engine": "199.5 cc",
+      "power": "24.5 bhp",
+      "transmission": "Manual",
+      "groundClearance": "168 mm",
+      "torque": "18.7 Nm",
+      "driveType": "Chain"
+    }
+  },
+
+  {
+    "id": 6,
+    "name": "Bajaj Dominar 250",
+    "price": "Rs. 1,80,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "A refined touring motorcycle with a powerful mid-range engine and premium design.",
+    "specifications": {
+      "engine": "248.7 cc",
+      "power": "27 bhp",
+      "transmission": "Manual",
+      "groundClearance": "157 mm",
+      "torque": "23.5 Nm",
+      "driveType": "Chain"
+    }
+  },
+
+  {
+    "id": 7,
+    "name": "Bajaj Dominar 400",
+    "price": "Rs. 2,30,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "The Dominar 400 is built for long-distance touring with strong highway performance.",
+    "specifications": {
+      "engine": "373.3 cc",
+      "power": "40 bhp",
+      "transmission": "Manual",
+      "groundClearance": "157 mm",
+      "torque": "35 Nm",
+      "driveType": "Chain"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Bajaj Dominar 400",
+    "price": "Rs. 2,30,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "The Dominar 400 is built for long-distance touring with strong highway performance.",
+    "specifications": {
+      "engine": "373.3 cc",
+      "power": "40 bhp",
+      "transmission": "Manual",
+      "groundClearance": "157 mm",
+      "torque": "35 Nm",
+      "driveType": "Chain"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Bajaj Dominar 400",
+    "price": "Rs. 2,30,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "The Dominar 400 is built for long-distance touring with strong highway performance.",
+    "specifications": {
+      "engine": "373.3 cc",
+      "power": "40 bhp",
+      "transmission": "Manual",
+      "groundClearance": "157 mm",
+      "torque": "35 Nm",
+      "driveType": "Chain"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Bajaj Dominar 400",
+    "price": "Rs. 2,30,000",
+    "note": "*(Ex-showroom price)",
+    "images": [
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg",
+      "/json-images/product1.jpg"
+    ],
+    "desc": "The Dominar 400 is built for long-distance touring with strong highway performance.",
+    "specifications": {
+      "engine": "373.3 cc",
+      "power": "40 bhp",
+      "transmission": "Manual",
+      "groundClearance": "157 mm",
+      "torque": "35 Nm",
+      "driveType": "Chain"
+    }
+  }
+]
