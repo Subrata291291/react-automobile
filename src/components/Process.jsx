@@ -11,7 +11,7 @@ const Process = () => {
         <div className="row">
           <div className="col-md-8 col-lg-6 col-xl-7 col-xxl-7 d-none d-xl-block" data-aos="fade-right" data-aos-delay="200">
             <div className="process-left">
-              <img src={aboutPic} alt="" />
+              <img src="https://salujaautomobile.com/wp-content/themes/saluja/images/about-1.jpeg" alt="" />
             </div>
           </div>
 
