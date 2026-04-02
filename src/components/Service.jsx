@@ -5,7 +5,7 @@ const Service = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://store.januskitchen.nl/wp-json/wp/v2/service_directory?per_page=100")
+    fetch("https://salujaautomobile.com/wp-json/wp/v2/service_directory?per_page=100")
       .then((res) => res.json())
       .then((data) => {
         const formatted = data.map((post) => ({

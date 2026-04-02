@@ -9,7 +9,7 @@ const Brands = () => {
   const [brands, setBrands] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "https://store.januskitchen.nl/wp-json/custom/v1/brands";
+  const API_URL = "https://salujaautomobile.com/wp-json/custom/v1/brands";
 
   useEffect(() => {
     const fetchBrands = async () => {

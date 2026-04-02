@@ -9,7 +9,7 @@ const Models = () => {
   const [error, setError] = useState(null);
 
   // Custom WordPress REST API endpoint
-  const API_URL = "https://store.januskitchen.nl/wp-json/custom/v1/products";
+  const API_URL = "https://salujaautomobile.com/wp-json/custom/v1/products";
 
   useEffect(() => {
     const fetchProducts = async () => {

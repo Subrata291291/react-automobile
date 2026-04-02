@@ -9,7 +9,7 @@ const CareerOptions = () => {
   const [selectedService, setSelectedService] = useState("");
 
   useEffect(() => {
-    fetch("https://januskitchen.nl/wp-json/wp/v2/career_content")
+    fetch("https://salujaautomobile.com/wp-json/wp/v2/career_content")
       .then((res) => res.json())
       .then((data) => {
         setCareers(data);

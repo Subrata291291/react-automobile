@@ -7,7 +7,7 @@ const SiteLogo = ({ className = "", fallbackText = "Automobile" }) => {
     const fetchLogo = async () => {
       try {
         const res = await fetch(
-          "https://store.januskitchen.nl/wp-json/custom/v1/site-logo"
+          "https://salujaautomobile.com/wp-json/custom/v1/site-logo"
         );
 
         const data = await res.json();
