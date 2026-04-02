@@ -9,7 +9,7 @@ const Csr = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://store.januskitchen.nl/wp-json/wp/v2/posts?_embed")
+    fetch("https://salujaautomobile.com/wp-json/wp/v2/posts?_embed")
       .then(res => res.json())
       .then(data => {
         setPosts(data);
