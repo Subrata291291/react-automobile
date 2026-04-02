@@ -16,7 +16,7 @@ const Showroom = () => {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          "https://store.januskitchen.nl/wp-json/custom/v1/products"
+          "https://salujaautomobile.com/wp-json/custom/v1/products"
         );
 
         if (!res.ok) {

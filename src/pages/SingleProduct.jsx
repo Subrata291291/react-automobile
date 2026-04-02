@@ -25,7 +25,7 @@ const SingleProduct = () => {
     const fetchProduct = async () => {
       try {
         const res = await fetch(
-          `https://store.januskitchen.nl/wp-json/custom/v1/product-by-slug/mt-15`
+          `https://salujaautomobile.com/wp-json/custom/v1/product-by-slug/mt-15`
         );
 
         if (!res.ok) throw new Error("Product not found");

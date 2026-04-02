@@ -11,7 +11,7 @@ const SingleBlog = () => {
 
   useEffect(() => {
     fetch(
-      `https://store.januskitchen.nl/wp-json/wp/v2/posts?slug=${slug}&_embed`
+      `https://salujaautomobile.com/wp-json/wp/v2/posts?slug=${slug}&_embed`
     )
       .then((res) => res.json())
       .then((data) => {
